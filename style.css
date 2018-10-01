@@ -1,3 +1,8 @@
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
 body {
   font-family: "Verdana", Times, serif;
   background-color: black;
@@ -9,10 +14,6 @@ h2 {
 
 h1 {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-}
-
-td {
-  padding-right: 20px;
 }
 
 button {
@@ -33,6 +34,7 @@ table {
   text-align: center;
   background-color: #999999;
   height: 100%;
+  overflow-y: hidden;
 }
 
 #navbar-container {
@@ -56,16 +58,55 @@ table {
   padding: 5%;
 }
 
-#walkthrough-container {
+#content-container {
   background-color: #464646;
   display: inline-block;
   padding: 10px;
   border: solid 2px #3b3b3b;
   border-radius: 5px;
+  min-width: 15%;
+  min-height: 15%;
 }
 
 #walkthrough-title {
   color: #8088d8;
+}
+
+#resources-nav-bar {
+  padding-bottom: 1%;
+}
+
+.attack-td {
+  background-color: #f5ac78;
+}
+
+.defense-td {
+  background-color: #FAE078;
+}
+
+.spattack-td {
+  background-color: #9DB7F5;
+}
+
+.spdefense-td {
+  background-color: #A7DB8D;
+}
+
+.speed-td {
+  background-color: #FA92B2;
+}
+
+.nature-td {
+  background-color: #505050;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border-top: none;
+}
+
+#phy-spc {
+  border-bottom: 5px solid #464646;
 }
 
 .header {
@@ -130,6 +171,11 @@ table {
   font-family: "Verdana", Times, serif;
 }
 
+.phy-spc-td {
+  background-color: #616161;
+  font-weight: bold;
+}
+
 #normal-button {
   width:86px;
   height: 40px;
@@ -141,6 +187,9 @@ table {
   background-color: white;
 	color: gray;
 }
+#normal-td {
+  color: gray;
+}
 
 #fire-button {
   width:86px;
@@ -151,6 +200,9 @@ table {
 }
 #fire-button:hover {
 	background-color: white;
+  color: #ff944d;
+}
+#fire-td {
   color: #ff944d;
 }
 
@@ -165,6 +217,9 @@ table {
 	background-color: white;
 	color: #3333ff;
 }
+#water-td {
+  color: #3333ff;
+}
 
 #grass-button {
   width:86px;
@@ -175,6 +230,9 @@ table {
 }
 #grass-button:hover {
   background-color: white;
+  color: #00b33c;
+}
+#grass-td {
   color: #00b33c;
 }
 
@@ -189,6 +247,9 @@ table {
   background-color: white;
   color: #f8d030;
 }
+#electric-td {
+  color: #f8d030;
+}
 
 #ice-button {
   width:86px;
@@ -199,6 +260,9 @@ table {
 }
 #ice-button:hover {
   background-color: white;
+  color: #99ffff;
+}
+#ice-td {
   color: #99ffff;
 }
 
@@ -213,6 +277,9 @@ table {
   background-color: white;
   color: #ff0000;
 }
+#fighting-td {
+  color: #ff0000;
+}
 
 #poison-button {
   width:86px;
@@ -225,6 +292,9 @@ table {
   background-color: white;
 	color: #a040a0;
 }
+#poison-td {
+  color: #a040a0;
+}
 
 #ground-button {
   width:86px;
@@ -235,6 +305,9 @@ table {
 }
 #ground-button:hover {
   background-color: white;
+  color: #e0c068;
+}
+#ground-td {
   color: #e0c068;
 }
 
@@ -249,6 +322,9 @@ table {
   background-color: white;
   color: #a890f0;
 }
+#flying-td {
+  color: #a890f0;
+}
 
 #psychic-button {
   width:86px;
@@ -259,6 +335,9 @@ table {
 }
 #psychic-button:hover {
   background-color: white;
+  color: #f85888;
+}
+#psychic-td {
   color: #f85888;
 }
 
@@ -273,6 +352,9 @@ table {
   background-color: white;
   color: #a8b820;
 }
+#bug-td {
+  color: #a8b820;
+}
 
 #rock-button {
   width:86px;
@@ -283,6 +365,9 @@ table {
 }
 #rock-button:hover {
   background-color: white;
+  color: #b8a038;
+}
+#rock-td {
   color: #b8a038;
 }
 
@@ -297,6 +382,9 @@ table {
   background-color: white;
   color: #705898;
 }
+#ghost-td {
+  color: #705898;
+}
 
 #dragon-button {
   width:86px;
@@ -307,6 +395,9 @@ table {
 }
 #dragon-button:hover {
   background-color: white;
+  color: #7038f8;
+}
+#dragon-td {
   color: #7038f8;
 }
 
@@ -321,6 +412,9 @@ table {
   background-color: white;
   color: #705848;
 }
+#dark-td {
+  color: #705848;
+}
 
 #steel-button {
   width:86px;
@@ -331,6 +425,9 @@ table {
 }
 #steel-button:hover {
   background-color: white;
+  color: #b8b8d0;
+}
+#steel-td {
   color: #b8b8d0;
 }
 
@@ -344,4 +441,7 @@ table {
 #fairy-button:hover {
   background-color: white;
 	color: #e898e8;
+}
+#fairy-td {
+  color: #e898e8;
 }
