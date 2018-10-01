@@ -1,17 +1,17 @@
 function openGen1Html() {
-    window.open("C:/Users/Chris/Documents/Projects/TypeChecker(v.0.0.3)/gen1typechecker.html", "_self");
+    window.open("./gen1typechecker.html", "_self");
 }
 
 function openGen2_5Html() {
-    window.open("C:/Users/Chris/Documents/Projects/TypeChecker(v.0.0.3)/gen2_5typechecker.html", "_self");
+    window.open("./gen2_5typechecker.html", "_self");
 }
 
 function openResourcesHtml() {
-    window.open("C:/Users/Chris/Documents/Projects/TypeChecker(v.0.0.3)/resources.html", "_self");
+    window.open("./resources.html", "_self");
 }
 
 function openGen6OnHtml() {
-    window.open("C:/Users/Chris/Documents/Projects/TypeChecker(v.0.0.3)/gen6typechecker.html", "_self");
+    window.open("./gen6typechecker.html", "_self");
 }
 
 function openWalkthroughRedAndBlue() {
