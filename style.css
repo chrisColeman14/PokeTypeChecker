@@ -1,0 +1,348 @@
+body {
+  font-family: "Verdana", Times, serif;
+  background-color: black;
+}
+
+h2 {
+  margin-bottom: 1px;
+}
+
+h1 {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+td {
+  padding-right: 20px;
+}
+
+button {
+  margin-bottom: 5px;
+  border-radius: 25px;
+  border: 2px solid black;
+}
+
+button:focus {
+  outline: none;
+}
+
+table {
+  text-align: center;
+}
+
+#body-container {
+  text-align: center;
+  background-color: #999999;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#navbar-container {
+  text-align: center;
+}
+
+#navbar-button-container {
+  padding: 1px;
+  text-align: center;
+}
+
+#type-button-container {
+  background-color: #464646;
+  display: inline-block;
+  padding: 10px;
+  border: solid 2px #3b3b3b;
+  border-radius: 5px;
+}
+
+#walkthrough-link {
+  padding: 5%;
+}
+
+#walkthrough-container {
+  background-color: #464646;
+  display: inline-block;
+  padding: 10px;
+  border: solid 2px #3b3b3b;
+  border-radius: 5px;
+}
+
+#walkthrough-title {
+  color: #8088d8;
+}
+
+.header {
+  background-color: #ffb3b3;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 25px;
+  height: 140px;
+  width: 778px;
+  margin-bottom: 1px;
+}
+
+.weakness {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #d87074;
+  border-radius: 25px;
+  background-color: #d87074;
+  display: inline-block;
+}
+
+.super-effective {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #5bbf5d;
+  border-radius: 25px;
+  background-color: #5bbf5d;
+  display: inline-block
+
+}
+
+.strong {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid green;
+  border-radius: 25px;
+  background-color: #80ff80;
+  display: inline-block
+}
+
+.not-very-effective {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #ffb3b3;
+  border-radius: 25px;
+  background-color: #ffb3b3;
+  display: inline-block
+}
+
+.no-effect {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #bfbfbf;
+  border-radius: 25px;
+  background-color: #bfbfbf;
+  display: inline-block;
+}
+
+#GhostText {
+  color: purple;
+  font-size: 30px;
+  font-family: "Verdana", Times, serif;
+}
+
+#normal-button {
+  width:86px;
+  height: 40px;
+	background-color: gray;
+  color: white;
+	border: 2px solid black;
+}
+#normal-button:hover {
+  background-color: white;
+	color: gray;
+}
+
+#fire-button {
+  width:86px;
+  height: 40px;
+  background-color: #ff944d;
+	border: 2px solid black;
+  color: white;
+}
+#fire-button:hover {
+	background-color: white;
+  color: #ff944d;
+}
+
+#water-button {
+  width:86px;
+  height: 40px;
+	background-color: #3333ff;
+	border: 2px solid #3333ff;
+  color: white;
+}
+#water-button:hover {
+	background-color: white;
+	color: #3333ff;
+}
+
+#grass-button {
+  width:86px;
+  height: 40px;
+	background-color: #00b33c;
+	border: 2px solid #00b33c;
+  color: white;
+}
+#grass-button:hover {
+  background-color: white;
+  color: #00b33c;
+}
+
+#electric-button {
+  width:86px;
+  height: 40px;
+	background-color: #f8d030;
+	border: 2px solid #f8d030;
+  color: white;
+}
+#electric-button:hover {
+  background-color: white;
+  color: #f8d030;
+}
+
+#ice-button {
+  width:86px;
+  height: 40px;
+	background-color: #99ffff;
+	border: 2px solid #99ffff;
+  color: white;
+}
+#ice-button:hover {
+  background-color: white;
+  color: #99ffff;
+}
+
+#fighting-button {
+  width:86px;
+  height: 40px;
+	background-color: #ff0000;
+	border: 2px solid #ff0000;
+  color: white;
+}
+#fighting-button:hover {
+  background-color: white;
+  color: #ff0000;
+}
+
+#poison-button {
+  width:86px;
+  height: 40px;
+	background-color: #a040a0;
+	border: 2px solid #a040a0;
+  color: white;
+}
+#poison-button:hover {
+  background-color: white;
+	color: #a040a0;
+}
+
+#ground-button {
+  width:86px;
+  height: 40px;
+	background-color: #e0c068;
+	border: 2px solid #e0c068;
+  color: white;
+}
+#ground-button:hover {
+  background-color: white;
+  color: #e0c068;
+}
+
+#flying-button {
+  width:86px;
+  height: 40px;
+	background-color: #a890f0;
+	border: 2px solid #a890f0;
+  color: white;
+}
+#flying-button:hover {
+  background-color: white;
+  color: #a890f0;
+}
+
+#psychic-button {
+  width:86px;
+  height: 40px;
+	background-color: #f85888;
+	border: 2px solid #f85888;
+  color: white;
+}
+#psychic-button:hover {
+  background-color: white;
+  color: #f85888;
+}
+
+#bug-button {
+  width:86px;
+  height: 40px;
+	background-color: #a8b820;
+	border: 2px solid #a8b820;
+  color: white;
+}
+#bug-button:hover {
+  background-color: white;
+  color: #a8b820;
+}
+
+#rock-button {
+  width:86px;
+  height: 40px;
+	background-color: #b8a038;
+	border: 2px solid #b8a038;
+  color: white;
+}
+#rock-button:hover {
+  background-color: white;
+  color: #b8a038;
+}
+
+#ghost-button {
+  width:86px;
+  height: 40px;
+	background-color: #705898;
+	border: 2px solid #705898;
+  color: white;
+}
+#ghost-button:hover {
+  background-color: white;
+  color: #705898;
+}
+
+#dragon-button {
+  width:86px;
+  height: 40px;
+	background-color: #7038f8;
+	border: 2px solid #7038f8;
+  color: white;
+}
+#dragon-button:hover {
+  background-color: white;
+  color: #7038f8;
+}
+
+#dark-button {
+  width:86px;
+  height: 40px;
+	background-color: #705848;
+	border: 2px solid #705848;
+  color: white;
+}
+#dark-button:hover {
+  background-color: white;
+  color: #705848;
+}
+
+#steel-button {
+  width:86px;
+  height: 40px;
+	background-color: #b8b8d0;
+	border: 2px solid #b8b8d0;
+  color: white;
+}
+#steel-button:hover {
+  background-color: white;
+  color: #b8b8d0;
+}
+
+#fairy-button {
+  width:86px;
+  height: 40px;
+	background-color: #e898e8;
+	border: 2px solid #e898e8;
+  color: white;
+}
+#fairy-button:hover {
+  background-color: white;
+	color: #e898e8;
+}
