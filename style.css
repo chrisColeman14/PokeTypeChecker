@@ -49,7 +49,7 @@ table {
 #type-button-container {
   background-color: #464646;
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
   border: solid 2px #3b3b3b;
   border-radius: 5px;
 }
@@ -64,8 +64,8 @@ table {
   padding: 10px;
   border: solid 2px #3b3b3b;
   border-radius: 5px;
-  min-width: 15%;
-  min-height: 15%;
+  min-width: 20%;
+  min-height: 20%;
 }
 
 #walkthrough-title {
@@ -74,6 +74,38 @@ table {
 
 #resources-nav-bar {
   padding-bottom: 1%;
+}
+
+#effect-content-wrapper {
+  box-sizing: border-box;
+   
+}
+
+#effect-upper {
+}
+
+#super-content-container {
+  float: left;
+  width: 50%;
+}
+
+#half-content-container {
+  float: right;
+  width: 50%;
+}
+
+#no-effect-content-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+#effect-lower {
+  
+}
+
+#Grass-text {
+  color: #00b33c;
 }
 
 .attack-td {
@@ -202,7 +234,7 @@ table {
 	background-color: white;
   color: #ff944d;
 }
-#fire-td {
+#fire-td, #Fire-text {
   color: #ff944d;
 }
 
@@ -217,7 +249,7 @@ table {
 	background-color: white;
 	color: #3333ff;
 }
-#water-td {
+#water-td, #Water-text {
   color: #3333ff;
 }
 
@@ -247,7 +279,7 @@ table {
   background-color: white;
   color: #f8d030;
 }
-#electric-td {
+#electric-td, #Electric-text {
   color: #f8d030;
 }
 
@@ -308,6 +340,9 @@ table {
   color: #e0c068;
 }
 #ground-td {
+  color: #e0c068;
+}
+#Ground-text {
   color: #e0c068;
 }
 
