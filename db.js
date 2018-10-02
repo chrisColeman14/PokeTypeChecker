@@ -68,7 +68,7 @@ function findDb(code) {
 
     document.getElementById("effect-break").innerHTML += "<br>";
     if(supers.length > 0) {
-        document.getElementById("super-content-container").innerHTML += '<h6>Super Effective<h6>';
+        document.getElementById("super-content-container").innerHTML += '<h6 style="color: rgb(204, 255, 204);">Super Effective<h6>';
         for(var i in supers) {
             document.getElementById("super-content-container").innerHTML+=
             '<div id="' + supers[i] + '-text">' + supers[i] + '</div><br>';
@@ -79,7 +79,7 @@ function findDb(code) {
     }
 
     if(half.length > 0) {
-        document.getElementById("half-content-container").innerHTML += '<h6>Half Effective<h6>';
+        document.getElementById("half-content-container").innerHTML += '<h6 style="color: rgb(255, 204, 204);">Half Effective<h6>';
         for(var i in half) {
             document.getElementById("half-content-container").innerHTML+=
             '<div id="' + half[i] + '-text">' + half[i] + '</div><br>';
@@ -92,7 +92,7 @@ function findDb(code) {
 
     if(resist.length > 0) {
         document.getElementById("resist-content-container").innerHTML += "<br>";
-        document.getElementById("resist-content-container").innerHTML += '<h6>Resists<h6>';
+        document.getElementById("resist-content-container").innerHTML += '<h6 style="color: rgb(204, 255, 204);">Resists<h6>';
         for(var i in resist) {
             document.getElementById("resist-content-container").innerHTML+=
             '<div id="' + resist[i] + '-text">' + resist[i] + '</div><br>';
@@ -104,7 +104,7 @@ function findDb(code) {
 
     if(weak.length > 0) {
         document.getElementById("weak-content-container").innerHTML += "<br>";
-        document.getElementById("weak-content-container").innerHTML += '<h6>Weak Against<h6>';
+        document.getElementById("weak-content-container").innerHTML += '<h6 style="color: rgb(255, 204, 204);">Weak Against<h6>';
         for(var i in weak) {
             document.getElementById("weak-content-container").innerHTML+=
             '<div id="' + weak[i] + '-text">' + weak[i] + '</div><br>';
@@ -116,7 +116,7 @@ function findDb(code) {
     adjustHeightMidContent();
 
     if(noEffect.length > 0) {
-        document.getElementById("no-effect-content-container").innerHTML += '<br><h6>No Effect Against<h6>';
+        document.getElementById("no-effect-content-container").innerHTML += '<br><h6 style="color: rgb(255, 204, 204);">No Effect Against<h6>';
         for(var i in noEffect) {
             document.getElementById("no-effect-content-container").innerHTML+=
             '<div id="' + noEffect[i] + '-text">' + noEffect[i] + '</div><br>';
@@ -127,7 +127,7 @@ function findDb(code) {
     }
     if(immune.length > 0) {
         document.getElementById("immune-content-container").innerHTML += "<br>";
-        document.getElementById("immune-content-container").innerHTML += '<h6>Immune To<h6>';
+        document.getElementById("immune-content-container").innerHTML += '<h6 style="color: rgb(204, 255, 204);">Immune To<h6>';
         for(var i in immune) {
             document.getElementById("immune-content-container").innerHTML+=
             '<div id="' + immune[i] + '-text">' + immune[i] + '</div><br>';
