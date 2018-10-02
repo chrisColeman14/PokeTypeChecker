@@ -1,11 +1,13 @@
 html {
   min-height: 100%;
   min-width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: "Verdana", Times, serif;
   background-color: black;
+  height: 100%;
 }
 
 h2 {
@@ -30,11 +32,23 @@ table {
   text-align: center;
 }
 
-#body-container {
+#line-break {
+  height: 10%;
+  width: 10%;
+}
+
+#body-wrapper {
   text-align: center;
+  height: 100%;
+  clear: both;
+  overflow: hidden;
+  
+}
+
+#body-container {
   background-color: #999999;
   height: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 #navbar-container {
@@ -76,36 +90,29 @@ table {
   padding-bottom: 1%;
 }
 
-#effect-content-wrapper {
+#effect-upper-content-wrapper, 
+#effect-bottom-content-wrapper, 
+#effect-middle-content-wrapper {
+  height: 50%;
+  position: absolute;
+}
+
+ #effect-upper, #effect-middle{
+  position: absolute;
+  width: 90%;
+  height: 50%;
+}
+
+#super-content-container, #resist-content-container, #immune-content-container {
   box-sizing: border-box;
-   
-}
-
-#effect-upper {
-}
-
-#super-content-container {
   float: left;
   width: 50%;
 }
 
-#half-content-container {
+#half-content-container, #weak-content-container, #no-effect-content-container {
+  box-sizing: border-box;
   float: right;
   width: 50%;
-}
-
-#no-effect-content-container {
-  margin: 0 auto;
-  width: 50%;
-}
-
-
-#effect-lower {
-  
-}
-
-#Grass-text {
-  color: #00b33c;
 }
 
 .attack-td {
@@ -219,7 +226,7 @@ table {
   background-color: white;
 	color: gray;
 }
-#normal-td {
+#normal-td, #Normal-text {
   color: gray;
 }
 
@@ -264,7 +271,7 @@ table {
   background-color: white;
   color: #00b33c;
 }
-#grass-td {
+#grass-td, #Grass-text {
   color: #00b33c;
 }
 
@@ -294,7 +301,7 @@ table {
   background-color: white;
   color: #99ffff;
 }
-#ice-td {
+#ice-td, #Ice-text {
   color: #99ffff;
 }
 
@@ -309,7 +316,7 @@ table {
   background-color: white;
   color: #ff0000;
 }
-#fighting-td {
+#fighting-td, #Fighting-text {
   color: #ff0000;
 }
 
@@ -324,7 +331,7 @@ table {
   background-color: white;
 	color: #a040a0;
 }
-#poison-td {
+#poison-td, #Poison-text {
   color: #a040a0;
 }
 
@@ -339,10 +346,7 @@ table {
   background-color: white;
   color: #e0c068;
 }
-#ground-td {
-  color: #e0c068;
-}
-#Ground-text {
+#ground-td, #Ground-text {
   color: #e0c068;
 }
 
@@ -357,7 +361,7 @@ table {
   background-color: white;
   color: #a890f0;
 }
-#flying-td {
+#flying-td, #Flying-text {
   color: #a890f0;
 }
 
@@ -372,7 +376,7 @@ table {
   background-color: white;
   color: #f85888;
 }
-#psychic-td {
+#psychic-td, #Psychic-text {
   color: #f85888;
 }
 
@@ -387,7 +391,7 @@ table {
   background-color: white;
   color: #a8b820;
 }
-#bug-td {
+#bug-td, #Bug-text {
   color: #a8b820;
 }
 
@@ -402,7 +406,7 @@ table {
   background-color: white;
   color: #b8a038;
 }
-#rock-td {
+#rock-td, #Rock-text {
   color: #b8a038;
 }
 
@@ -417,7 +421,7 @@ table {
   background-color: white;
   color: #705898;
 }
-#ghost-td {
+#ghost-td, #Ghost-text {
   color: #705898;
 }
 
@@ -432,7 +436,7 @@ table {
   background-color: white;
   color: #7038f8;
 }
-#dragon-td {
+#dragon-td, #Dragon-text {
   color: #7038f8;
 }
 
@@ -447,7 +451,7 @@ table {
   background-color: white;
   color: #705848;
 }
-#dark-td {
+#dark-td, #Dark-text {
   color: #705848;
 }
 
@@ -462,7 +466,7 @@ table {
   background-color: white;
   color: #b8b8d0;
 }
-#steel-td {
+#steel-td, #Steel-text {
   color: #b8b8d0;
 }
 
@@ -477,6 +481,6 @@ table {
   background-color: white;
 	color: #e898e8;
 }
-#fairy-td {
+#fairy-td, #Fairy-text {
   color: #e898e8;
 }
