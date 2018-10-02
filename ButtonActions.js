@@ -225,7 +225,7 @@ function loadPhysicalSpecial() {
                 '</tr>' +
 
                 '<tr>' +
-                    '<td id="rock-td" class="phy-spc-td">Rock</td>' +
+                    '<td id="rock-td" class="phy-spc-td">rock</td>' +
                     '<td id="ice-td" class="phy-spc-td">Ice</td>' +
                 '</tr>' +
 
