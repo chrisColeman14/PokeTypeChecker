@@ -125,26 +125,34 @@ function findDb(code) {
     }
     adjustHeightMidContent();
 
-    if(noEffect.length > 0) {
-        document.getElementById("no-effect-content-container").innerHTML += '<br><h5 style="color: rgb(255, 204, 204);">No Effect Against</h5>';
-        for(var i in noEffect) {
-            document.getElementById("no-effect-content-container").innerHTML+=
-            '<div id="' + noEffect[i] + '-text">' + noEffect[i] + '</div><br>';
+    if(noEffect.length == 0 && immune.length ==0) {
+        document.getElementById("no-effect-content-container").style.height = "0";
+        document.getElementById("immune-content-container").style.height = "0";
+        document.getElementById("no-effect-content-container").style.width = "0";
+        document.getElementById("immune-content-container").style.width = "0";
+    } 
+    else {
+        if(noEffect.length > 0) {
+            document.getElementById("no-effect-content-container").innerHTML += '<br><h5 style="color: rgb(255, 204, 204);">No Effect Against</h5>';
+            for(var i in noEffect) {
+                document.getElementById("no-effect-content-container").innerHTML+=
+                '<div id="' + noEffect[i] + '-text">' + noEffect[i] + '</div><br>';
+            }
+        } else {
+            document.getElementById("no-effect-content-container").style.height = "0%";
+            document.getElementById("immune-content-container").style.height = "100%";
         }
-    } else {
-        document.getElementById("no-effect-content-container").style.height = "0%";
-        document.getElementById("immune-content-container").style.height = "100%";
-    }
-    if(immune.length > 0) {
-        document.getElementById("immune-content-container").innerHTML += "<br>";
-        document.getElementById("immune-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Immune To</h5>';
-        for(var i in immune) {
-            document.getElementById("immune-content-container").innerHTML+=
-            '<div id="' + immune[i] + '-text">' + immune[i] + '</div><br>';
+        if(immune.length > 0) {
+            document.getElementById("immune-content-container").innerHTML += "<br>";
+            document.getElementById("immune-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Immune To</h5>';
+            for(var i in immune) {
+                document.getElementById("immune-content-container").innerHTML+=
+                '<div id="' + immune[i] + '-text">' + immune[i] + '</div><br>';
+            }
+        } else {
+            document.getElementById("no-effect-content-container").style.width = "100%";
+            document.getElementById("immune-content-container").style.width = "0%";
         }
-    } else {
-        document.getElementById("no-effect-content-container").style.width = "100%";
-        document.getElementById("immune-content-container").style.width = "0%";
     }
     adjustHeightBottomContent();
 
@@ -295,7 +303,6 @@ function resetTypeButtonContainer() {
     document.getElementById("no-effect-content-container").innerHTML = "";
     document.getElementById("immune-content-container").innerHTML = "";
     document.getElementById("type-title").innerHTML = "";
-    document.getElementById("type-title").innerHTML += "<br><br><br><br>";
 
     document.getElementById("upper-content-wrapper").style.height = "0";
     document.getElementById("middle-content-wrapper").style.height = "0";
@@ -322,7 +329,6 @@ function resetTypeButtonContainer() {
     document.getElementById("weak-content-container").style.width = "0";
     document.getElementById("no-effect-content-container").style.width = "0";
     document.getElementById("immune-content-container").style.width = "0";
-    
 }
 
 function applyTypeTitle(type) {
@@ -331,9 +337,22 @@ function applyTypeTitle(type) {
     document.getElementById("type-title").style.paddingTop = "2%";
 }
 
+function applyDualTypeTitle(type1, type2) {
+    document.getElementById("type-title").innerHTML+= '<div id="' + type1 + '-text" style="display: inline-block; padding-right: 10px;"><h2>' + type1 + '</h2></div>';
+    document.getElementById("type-title").innerHTML+= '<div id="' + type2 + '-text" style="display: inline-block; "><h2>' + type2 + '</h2></div>';
+    document.getElementById("type-title").style.height = "8%";
+    document.getElementById("type-title").style.paddingTop = "2%";
+}
+
 function toggleDualType() {
     if(document.getElementById("dual-button-text").innerHTML == "Dual-Types") {
+        resetTypeButtonContainer();
         initButtonsForType1();
+        document.getElementById("dual-button-text").innerHTML = "Single Type";
+    } else if(document.getElementById("dual-button-text").innerHTML == "Single Type") {
+        document.getElementById("dual-button-text").innerHTML = "Dual-Types"
+        resetTypeButtonContainer();
+        resetButtons();
     }
 }
 
@@ -356,16 +375,28 @@ function initButtonsForType2() {
 }
 
 function onClickType1(type) {
+    resetDualButtons();
+    buttons = document.querySelectorAll('.type-button');
+    for(var i = 0; i < buttons.length; i++) {
+        if(buttons[i].innerHTML == type)
+            buttons[i].classList.replace("not-active","active");
+    }
+    resetTypeButtonContainer();
     type1 = type;
     initButtonsForType2();
 }
 
 function onClickType2(type) {
+    buttons = document.querySelectorAll('.type-button');
+    for(var i = 0; i < buttons.length; i++) {
+        if(buttons[i].innerHTML == type)
+            buttons[i].classList.replace("not-active", "active");
+    }
     type2 = type;
     findDbDual(type1, type2);
     type1 = "";
     type2 = "";
-    resetButtons();
+    initButtonsForType1();
 }
 
 function resetButtons() {
@@ -374,6 +405,23 @@ function resetButtons() {
     for(var i = 0; i < buttons.length; i++) {
         var text = buttons[i].innerHTML;
         buttons[i].setAttribute( "onClick", 'findDb("'+ text +'");');
+        if(buttons[i].classList.contains("active")) {
+            console.log("it worked");
+            buttons[i].classList.replace("active", "not-active");
+        }
+    }
+}
+
+function resetDualButtons() {
+    var buttons = [];
+    buttons = document.querySelectorAll('.type-button');
+    for(var i = 0; i < buttons.length; i++) {
+        var text = buttons[i].innerHTML;
+        buttons[i].setAttribute( "onClick", 'onClickType1("'+ text +'");');
+        if(buttons[i].classList.contains("active")) {
+            console.log("it worked");
+            buttons[i].classList.replace("active", "not-active");
+        }
     }
 }
 
@@ -416,22 +464,7 @@ function findDbDual() {
             defenseList2 = db["Defense"][i].values;
     }
 
-    supers1 = findEffectNumber(attackList1, "2");
-    half1 = findEffect(attackList1, "0.5");
-    noEffect1 = findEffect(attackList1, "0");
-    weak1 = findEffect(defenseList1, "2");
-    resist1 = findEffect(defenseList1, "0.5");
-    immune1 = findEffect(defenseList1, "0");
-
-    supers2 = findEffectNumber(attackList2, "2");
-    half2 = findEffect(attackList2, "0.5");
-    noEffect2 = findEffect(attackList2, "0");
-    weak2 = findEffect(defenseList2, "2");
-    resist2 = findEffect(defenseList2, "0.5");
-    immune2 = findEffect(defenseList2, "0");
     initDualVars();
-
-    
 
     var attacks = [];
     var defense = [];
@@ -546,9 +579,12 @@ function findDbDual() {
     }
 
     console.log(attacks);
-    console.log(dualSupers);
+    
+    supers1 = findEffect(dualSupers, "0.25");
+    applyDualTypeTitle(type1, type2);
     dualSupers = [];
     dualDefense = [];
+    console.log(supers1);
 }
 
 function initDualVars() {
@@ -557,6 +593,8 @@ function initDualVars() {
         dualDefense.push("");
     }
 }
+
+
 
 function numberToString(key) {
     switch(key) {
