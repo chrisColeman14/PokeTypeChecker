@@ -32,9 +32,21 @@ table {
   text-align: center;
 }
 
+p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 #line-break {
   height: 10%;
   width: 10%;
+}
+
+#type-title {
+  text-align: center;
+  padding-top: 2%;
+  height: 7%;
+  margin-top: 20;
 }
 
 #body-wrapper {
@@ -220,7 +232,7 @@ table {
   height: 40px;
 	background-color: gray;
   color: white;
-	border: 2px solid black;
+	border: 2px solid gray;
 }
 #normal-button:hover {
   background-color: white;
@@ -234,7 +246,7 @@ table {
   width:86px;
   height: 40px;
   background-color: #ff944d;
-	border: 2px solid black;
+	border: 2px solid #ff944d;
   color: white;
 }
 #fire-button:hover {
