@@ -23,13 +23,13 @@ db  = {
         {"key":"Normal", "values": ["1", "1", "1", "1", "1", "1", "2", "1", "1", "1", "1", "1", "1", "0", "1"]},
         {"key":"Fire", "values": ["1", "0.5", "2", "1", "0.5", "1", "1", "1", "2", "1", "1", "0.5", "2", "1", "1"]},
         {"key":"Water", "values": ["1", "0.5", "0.5", "2", "2", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]},
-        {"key":"Electric","values": ["1", "1", "1", "0.5", "1", "1", "1", "1", "2", "0.5", "1", "1", "1", "1", "1"]},
+        {"key":"Electric","values": ["1", "1", "1", "0.5", "1", "1", "2", "1", "2", "0.5", "1", "1", "1", "1", "1"]},
         {"key":"Grass","values": ["1", "2", "0.5", "0.5", "0.5", "2", "1", "2", "0.5", "2", "1", "2", "1", "1", "1"]},
         {"key":"Ice","values": ["1", "2", "1", "1", "1", "0.5", "2", "1", "1", "1", "1", "1", "2", "1", "1"]},
         {"key":"Fighting","values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "2", "0.5", "0.5", "1", "1"]},
-        {"key":"Poison","values": ["1", "1", "1", "1", "0.5", "1", "0.5", "0.5", "1", "1", "2", "2", "2", "1", "1"]},
+        {"key":"Poison","values": ["1", "1", "1", "1", "0.5", "1", "0.5", "0.5", "2", "1", "2", "0.5", "1", "1", "1", "1", "1"]},
         {"key":"Ground", "values": ["1", "1", "2", "0", "2", "2", "1", "0.5", "1", "1", "1", "1", "0.5", "1", "1"]},
-        {"key":"Flying","values": ["1", "1", "1", "1", "1", "2", "0.5", "1", "0", "1", "1", "0.5", "2", "1", "1"]},
+        {"key":"Flying","values": ["1", "1", "1", "2", "1", "2", "0.5", "1", "0", "1", "1", "0.5", "2", "1", "1"]},
         {"key":"Psychic","values": ["1", "1", "1", "1", "1", "1", "0.5", "1", "1", "1", "0.5", "2", "1", "0", "1"]},
         {"key":"Bug","values": ["1", "2", "1", "1", "0.5", "1", "0.5", "2", "0.5", "2", "1", "1", "2", "1", "1"]},
         {"key":"Rock","values": ["0.5", "0.5", "2", "1", "2", "1", "2", "0.5", "2", "0.5", "1", "1", "1", "1", "1"]},
@@ -42,6 +42,8 @@ db  = {
 
 var type1 = "";
 var type2 = "";
+var dualSupers = [];
+var dualDefense = [];
 
 function findDb(code) {
     var attackList = [];
@@ -160,6 +162,14 @@ function findEffect(list, damage) {
         if(list[i] == damage) {
             supers.push(numberToString(i));
         }
+    }
+    return supers;
+}
+
+function findEffectNumber(list, damage) {
+    var supers = [];
+    for(var i in list) {
+        supers.push(db["Attack"][i].values);
     }
     return supers;
 }
@@ -330,10 +340,8 @@ function toggleDualType() {
 function initButtonsForType1() {
     var buttons = [];
     buttons = document.querySelectorAll('.type-button');
-    console.log(buttons.length);
     for(var i = 0; i < buttons.length; i++) {
         var text = numberToString(i.toString());
-        console.log(text);
         buttons[i].setAttribute( "onClick", 'onClickType1("'+ text +'");');
     }
 }
@@ -341,10 +349,8 @@ function initButtonsForType1() {
 function initButtonsForType2() {
     var buttons = [];
     buttons = document.querySelectorAll('.type-button');
-    console.log(buttons.length);
     for(var i = 0; i < buttons.length; i++) {
-        var text = numberToString(i.toString());
-        console.log(text);
+        var text = buttons[i].innerHTML;
         buttons[i].setAttribute( "onClick", 'onClickType2("'+ text +'");');
     }
 }
@@ -356,19 +362,200 @@ function onClickType1(type) {
 
 function onClickType2(type) {
     type2 = type;
-    findDbDual();
+    findDbDual(type1, type2);
     type1 = "";
     type2 = "";
     resetButtons();
 }
 
 function resetButtons() {
-    document.getElementById("normal-button").setAttribute( "onClick", 'javascript: findDb("Normal");' );
-    document.getElementById("fire-button").setAttribute( "onClick", 'javascript: findDb("Fire");' );
+    var buttons = [];
+    buttons = document.querySelectorAll('.type-button');
+    for(var i = 0; i < buttons.length; i++) {
+        var text = buttons[i].innerHTML;
+        buttons[i].setAttribute( "onClick", 'findDb("'+ text +'");');
+    }
 }
 
 function findDbDual() {
     console.log("Type 1: " + type1 + " Type 2: "+  type2);
+    var attackList1 = [];
+    var defenseList1 = [];
+    var attackList2 = [];
+    var defenseList2 = [];
+
+    var supers1 = [];
+    var half1 = [];
+    var weak1 = [];
+    var resist1 = [];
+    var noEffect1 = [];
+    var immune1 = [];
+
+    var supers2 = [];
+    var half2 = [];
+    var weak2 = [];
+    var resist2 = [];
+    var noEffect2 = [];
+    var immune2 = [];
+
+    for(var i in db["Attack"]) {
+        if(db["Attack"][i].key == type1)
+            attackList1 = db["Attack"][i].values;
+    }
+    for(var i in db["Defense"]) {
+        if(db["Defense"][i].key == type1)
+            defenseList1 = db["Defense"][i].values;
+    }
+
+    for(var i in db["Attack"]) {
+        if(db["Attack"][i].key == type2)
+            attackList2 = db["Attack"][i].values;
+    }
+    for(var i in db["Defense"]) {
+        if(db["Defense"][i].key == type2)
+            defenseList2 = db["Defense"][i].values;
+    }
+
+    supers1 = findEffectNumber(attackList1, "2");
+    half1 = findEffect(attackList1, "0.5");
+    noEffect1 = findEffect(attackList1, "0");
+    weak1 = findEffect(defenseList1, "2");
+    resist1 = findEffect(defenseList1, "0.5");
+    immune1 = findEffect(defenseList1, "0");
+
+    supers2 = findEffectNumber(attackList2, "2");
+    half2 = findEffect(attackList2, "0.5");
+    noEffect2 = findEffect(attackList2, "0");
+    weak2 = findEffect(defenseList2, "2");
+    resist2 = findEffect(defenseList2, "0.5");
+    immune2 = findEffect(defenseList2, "0");
+    initDualVars();
+
+    
+
+    var attacks = [];
+    var defense = [];
+
+    for(var i = 0; i < 17; i++) {        
+        if(db["Attack"][i].key == type1 || db["Attack"][i].key == type2)
+        {
+            attacks.push(db["Attack"][i].values);
+        }
+    }
+    for(var i = 0; i < 17; i++) {        
+        if(db["Defense"][i].key == type1 || db["Defense"][i].key == type2)
+        {
+            defense.push(db["Defense"][i].values);
+        }
+    }
+    for(var j = 0; j < 17; j++) {
+        if((attacks[0][j] == "0" || attacks[1][j] == "0")) {
+            dualSupers[j] = "0";
+        }
+        else if(attacks[0][j] == "2" && attacks[1][j] == "2") {
+            console.log(attacks[0][j] + " = " + attacks[1][j])
+            dualSupers[j]= "4";
+        }
+        else if((attacks[0][j] == "2" && attacks[1][j] == "1") || 
+            (attacks[0][j] == "1" && attacks[1][j] == "2")) {
+                dualSupers[j]= "2";
+        }  
+        else if((attacks[0][j] == "2" && attacks[1][j] == "0.5") || 
+            (attacks[0][j] == "0.5" && attacks[1][j] == "2")) {
+                dualSupers[j]= "1";
+        } 
+        else if((attacks[0][j] == "1" && attacks[1][j] == "0.5") || 
+            (attacks[0][j] == "0.5" && attacks[1][j] == "1")) {
+            dualSupers[j]= "0.5";
+        }  
+        else if(attacks[0][j] == "0.5" && attacks[1][j] == "0.5") {
+            dualSupers[j]= "0.25";
+        } 
+        else if(attacks[0][j] == "1" && attacks[1][j] == "1") {
+            dualSupers[j]= "1";
+        }
+
+        // if(dualSupers[j] == "4") {
+        //     console.log("quad attack: "+ numberToString(j.toString()));
+        // }
+        // else if(dualSupers[j] == "2") {
+        //     console.log("super: "+ numberToString(j.toString()));
+        // }
+        // else if(dualSupers[j] == "0.5") {
+        //     console.log("half: " + numberToString(j.toString()));
+        // }
+        // else if(dualSupers[j] == "0.25") {
+        //     console.log("forth damage: "+ numberToString(j.toString()));
+        // }
+        // else if(dualSupers[j] == "0") {
+        //     console.log("immune: "+ numberToString(j.toString()));
+        // }
+    }
+
+    for(var j = 0; j < 17; j++) {
+        if(j == 4) {
+            console.log(defense[0][j]);
+            console.log(defense[1][j]);
+        }
+
+        if((defense[0][j] == "0" || defense[1][j] == "0")) {
+            dualDefense[j] = "0";
+        }
+        else if((defense[0][j] == "0" && defense[1][j] == "0.5") || 
+        (defense[0][j] == "0.5" && defense[1][j] == "0")) {
+            dualDefense[j] = "1";
+        }
+        else if(defense[0][j] == "2" && defense[1][j] == "2") {
+            console.log(defense[0][j] + " = " + defense[1][j])
+            dualDefense[j]= "4";
+        }
+        else if((defense[0][j] == "2" && defense[1][j] == "1") || 
+            (defense[0][j] == "1" && defense[1][j] == "2")) {
+                dualDefense[j]= "2";
+        }  
+        else if((defense[0][j] == "2" && defense[1][j] == "0.5") || 
+            (defense[0][j] == "0.5" && defense[1][j] == "2")) {
+                dualDefense[j]= "1";
+        } 
+        else if((defense[0][j] == "1" && defense[1][j] == "0.5") || 
+            (defense[0][j] == "0.5" && defense[1][j] == "1")) {
+            dualDefense[j]= "0.5";
+        }  
+        else if(defense[0][j] == "0.5" && defense[1][j] == "0.5") {
+            dualDefense[j]= "0.25";
+        } 
+        else if(defense[0][j] == "1" && defense[1][j] == "1") {
+            dualDefense[j]= "1";
+        }
+
+        if(dualDefense[j] == "4") {
+            console.log("quad damage: "+ numberToString(j.toString()));
+        }
+        else if(dualDefense[j] == "2") {
+            console.log("super: "+ numberToString(j.toString()));
+        }
+        else if(dualDefense[j] == "0.5") {
+            console.log("resist: " + numberToString(j.toString()));
+        }
+        else if(dualDefense[j] == "0.25") {
+            console.log("quad resist: "+ numberToString(j.toString()));
+        }
+        else if(dualDefense[j] == "0") {
+            console.log("immune: "+ numberToString(j.toString()));
+        }
+    }
+
+    console.log(attacks);
+    console.log(dualSupers);
+    dualSupers = [];
+    dualDefense = [];
+}
+
+function initDualVars() {
+    for(var i = 0; i < 17; i++) {
+        dualSupers.push("");
+        dualDefense.push("");
+    }
 }
 
 function numberToString(key) {
