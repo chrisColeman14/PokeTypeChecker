@@ -32,9 +32,22 @@ table {
   text-align: center;
 }
 
+p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 #line-break {
   height: 10%;
   width: 10%;
+}
+
+#type-title {
+  text-align: center;
+  padding-top: 2%;
+  height: 7%;
+  margin-top: 20;
+  display: inline;
 }
 
 #body-wrapper {
@@ -97,7 +110,7 @@ table {
   position: absolute;
 }
 
- #effect-upper, #effect-middle{
+ #effect-upper, #effect-middle, #effect-bottom{
   position: absolute;
   width: 90%;
   height: 50%;
@@ -220,9 +233,9 @@ table {
   height: 40px;
 	background-color: gray;
   color: white;
-	border: 2px solid black;
+	border: 2px solid gray;
 }
-#normal-button:hover {
+#normal-button:hover, #normal-button.active {
   background-color: white;
 	color: gray;
 }
@@ -234,10 +247,10 @@ table {
   width:86px;
   height: 40px;
   background-color: #ff944d;
-	border: 2px solid black;
+	border: 2px solid #ff944d;
   color: white;
 }
-#fire-button:hover {
+#fire-button:hover, #fire-button.active {
 	background-color: white;
   color: #ff944d;
 }
@@ -252,7 +265,7 @@ table {
 	border: 2px solid #3333ff;
   color: white;
 }
-#water-button:hover {
+#water-button:hover, #water-button.active {
 	background-color: white;
 	color: #3333ff;
 }
@@ -267,7 +280,7 @@ table {
 	border: 2px solid #00b33c;
   color: white;
 }
-#grass-button:hover {
+#grass-button:hover, #grass-button.active {
   background-color: white;
   color: #00b33c;
 }
@@ -282,7 +295,7 @@ table {
 	border: 2px solid #f8d030;
   color: white;
 }
-#electric-button:hover {
+#electric-button:hover, #electric-button.active {
   background-color: white;
   color: #f8d030;
 }
@@ -297,7 +310,7 @@ table {
 	border: 2px solid #99ffff;
   color: white;
 }
-#ice-button:hover {
+#ice-button:hover, #ice-button.active {
   background-color: white;
   color: #99ffff;
 }
@@ -312,7 +325,7 @@ table {
 	border: 2px solid #ff0000;
   color: white;
 }
-#fighting-button:hover {
+#fighting-button:hover, #fighting-button.active {
   background-color: white;
   color: #ff0000;
 }
@@ -327,7 +340,7 @@ table {
 	border: 2px solid #a040a0;
   color: white;
 }
-#poison-button:hover {
+#poison-button:hover, #poison-button.active {
   background-color: white;
 	color: #a040a0;
 }
@@ -342,7 +355,7 @@ table {
 	border: 2px solid #e0c068;
   color: white;
 }
-#ground-button:hover {
+#ground-button:hover, #ground-button.active {
   background-color: white;
   color: #e0c068;
 }
@@ -357,7 +370,7 @@ table {
 	border: 2px solid #a890f0;
   color: white;
 }
-#flying-button:hover {
+#flying-button:hover, #flying-button.active {
   background-color: white;
   color: #a890f0;
 }
@@ -372,7 +385,7 @@ table {
 	border: 2px solid #f85888;
   color: white;
 }
-#psychic-button:hover {
+#psychic-button:hover, #psychic-button.active {
   background-color: white;
   color: #f85888;
 }
@@ -387,7 +400,7 @@ table {
 	border: 2px solid #a8b820;
   color: white;
 }
-#bug-button:hover {
+#bug-button:hover, #bug-button.active {
   background-color: white;
   color: #a8b820;
 }
@@ -402,7 +415,7 @@ table {
 	border: 2px solid #b8a038;
   color: white;
 }
-#rock-button:hover {
+#rock-button:hover, #rock-button.active {
   background-color: white;
   color: #b8a038;
 }
@@ -417,7 +430,7 @@ table {
 	border: 2px solid #705898;
   color: white;
 }
-#ghost-button:hover {
+#ghost-button:hover, #ghost-button.active {
   background-color: white;
   color: #705898;
 }
@@ -432,7 +445,7 @@ table {
 	border: 2px solid #7038f8;
   color: white;
 }
-#dragon-button:hover {
+#dragon-button:hover, #dragon-button.active {
   background-color: white;
   color: #7038f8;
 }
@@ -447,7 +460,7 @@ table {
 	border: 2px solid #705848;
   color: white;
 }
-#dark-button:hover {
+#dark-button:hover, #dark-button.active {
   background-color: white;
   color: #705848;
 }
@@ -462,7 +475,7 @@ table {
 	border: 2px solid #b8b8d0;
   color: white;
 }
-#steel-button:hover {
+#steel-button:hover, #steel-button.active {
   background-color: white;
   color: #b8b8d0;
 }
@@ -477,7 +490,7 @@ table {
 	border: 2px solid #e898e8;
   color: white;
 }
-#fairy-button:hover {
+#fairy-button:hover, #fairy-button.active {
   background-color: white;
 	color: #e898e8;
 }
