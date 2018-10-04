@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>TypeChecker v0.0.3</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="ButtonActions.js"></script>
+        <script src="gen2_5db.js"></script>
+    </head>
+
+    <body id="body">
+        <div id="body-wrapper">
+            <div id="body-container" class="container-large">
+                <div id="navbar-container" class="container">
+                    <div id="title-container" class="container">
+                        <div id="title" class="title">
+                            <h2>Type Checker</h2>
+                        </div>
+                    </div>
+                    <div id="navbar-button-container" class="container">
+                        <button id="Gen-1-button" class="btn" onclick="openGen1Html()">Generation 1</button>
+                        <button id="Gen-2-5-button" class="btn" onclick="openGen2_5Html()">Generation 2-5</button>
+                        <button id="Gen-6-on-button" class="btn" onclick="openGen6OnHtml()">Generation 6+</button>
+                        <button id="Resources" class="btn" onclick="openResourcesHtml()">Resources</button>
+                        <button id="Donate" class="btn">Donate</button>
+                    </div>
+                </div>
+                
+                <br>
+                <div id="body-content-container" class="container">
+                    <div id="resources-nav-bar" class="container-small">
+                        <button id="toggle-dual-button" class="btn" onclick="toggleDualType()">
+                            <div id="dual-button-text">Dual-Types</div>
+                        </button>
+                        <button id="clear-button" class="btn" onclick="resetTypeButtonContainer()">Reset</button>
+                    </div>
+                    <div id="type-button-container" class="container-small animated slideinup">
+                        <button id="normal-button" class="btn type-button not-active" onclick='findDb("Normal")'>Normal</button>&nbsp;
+                        <button id="fire-button" class="btn type-button not-active" onclick='findDb("Fire")'>Fire</button>&nbsp;
+                        <button id="water-button" class="btn type-button not-active" onclick='findDb("Water")'>Water</button>&nbsp;
+                        <button id="electric-button" class="btn type-button not-active" onclick='findDb("Electric")'>Electric</button>&nbsp;
+                        <br>
+                        <br>
+                        <button id="grass-button" class="btn type-button not-active" onclick='findDb("Grass")'>Grass</button>&nbsp;
+                        <button id="ice-button" class="btn type-button not-active" onclick='findDb("Ice")'>Ice</button>&nbsp;
+                        <button id="fighting-button" class="btn type-button not-active" onclick='findDb("Fighting")'>Fighting</button>&nbsp;
+                        <button id="poison-button" class="btn type-button not-active" onclick='findDb("Poison")'>Poison</button>&nbsp;
+                        <br>
+                        <br>
+                        <button id="ground-button" class="btn type-button not-active" onclick='findDb("Ground")'>Ground</button>&nbsp;
+                        <button id="flying-button" class="btn type-button not-active" onclick='findDb("Flying")'>Flying</button>&nbsp;
+                        <button id="psychic-button" class="btn type-button not-active" onclick='findDb("Psychic")'>Psychic</button>&nbsp;
+                        <button id="bug-button" class="btn type-button not-active" onclick='findDb("Bug")'>Bug</button>&nbsp;
+                        <br>
+                        <br>
+                        <button id="rock-button" class="btn type-button not-active" onclick='findDb("Rock")'>Rock</button>&nbsp;
+                        <button id="ghost-button" class="btn type-button not-active" onclick='findDb("Ghost")'>Ghost</button>&nbsp;
+                        <button id=dragon-button class="btn type-button not-active" onclick='findDb("Dragon")'>Dragon</button>&nbsp;
+                        <button id="dark-button" class="btn type-button not-active" onclick='findDb("Dark")'>Dark</button>
+                        <br>
+                        <br>
+                        <button id="steel-button" class="btn type-button not-active" onclick='findDb("Steel")'>Steel</button>
+                        <br>
+                        <br>
+                        <div id="type-title-container" class="container-small">
+                            <div id="type-title"></div>
+                        </div>
+                        <div id="upper-content-wrapper">
+                            <div id="effect-content-upper-wrapper" class="container-large">
+                                <div id="effect-upper" class="container-small effect-content-row">
+                                    <div id="super-content-container" class="container-small">
+                                    </div>
+                                    <div id="half-content-container" class="container-small">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="middle-content-wrapper">
+                            <div id="effect-content-middle-wrapper" class="container-large">
+                                <div id="effect-break"></div>
+                                <div id="effect-middle" class="container-small effect-content-row">
+                                    <div id="resist-content-container" class="container-small">
+                                    </div>
+                                    <div id="weak-content-container" class="container-small">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="bottom-content-wrapper">
+                            <div id="effect-content-bottom-wrapper" class="container-large">
+                                    <div id="effect-bottom" class="container-small effect-content-row">
+                                        <div id="immune-content-container" class="container-small">
+                                        </div>
+                                        <div id="no-effect-content-container" class="container-small">
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div id="line-break">
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
