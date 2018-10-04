@@ -1,1 +1,0 @@
-<?php header( 'Location: /gen6typechecker.html' ) ;  ?>
