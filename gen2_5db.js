@@ -20,23 +20,23 @@ db  = {
     ],
 
     "Defense": [
-        {"key":"Normal", "values": ["1", "1", "1", "1", "1", "1", "2", "1", "1", "1", "1", "1", "1", "0", "1"]},
-        {"key":"Fire", "values": ["1", "0.5", "2", "1", "0.5", "1", "1", "1", "2", "1", "1", "0.5", "2", "1", "1"]},
-        {"key":"Water", "values": ["1", "0.5", "0.5", "2", "2", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]},
-        {"key":"Electric","values": ["1", "1", "1", "0.5", "1", "1", "2", "1", "2", "0.5", "1", "1", "1", "1", "1"]},
-        {"key":"Grass","values": ["1", "2", "0.5", "0.5", "0.5", "2", "1", "2", "0.5", "2", "1", "2", "1", "1", "1"]},
-        {"key":"Ice","values": ["1", "2", "1", "1", "1", "0.5", "2", "1", "1", "1", "1", "1", "2", "1", "1"]},
-        {"key":"Fighting","values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "2", "0.5", "0.5", "1", "1"]},
+        {"key":"Normal", "values": ["1", "1", "1", "1", "1", "1", "2", "1", "1", "1", "1", "1", "1", "0", "1", "1", "1"]},
+        {"key":"Fire", "values": ["1", "0.5", "2", "1", "0.5", "0.5", "1", "1", "2", "1", "1", "0.5", "2", "1", "1", "1", "0.5"]},
+        {"key":"Water", "values": ["1", "0.5", "0.5", "2", "2", "0.5", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0.5"]},
+        {"key":"Electric","values": ["1", "1", "1", "0.5", "1", "1", "1", "1", "2", "0.5", "1", "1", "1", "1", "1", "1", "0.5"]},
+        {"key":"Grass","values": ["1", "2", "0.5", "0.5", "0.5", "2", "1", "2", "0.5", "2", "1", "2", "1", "1", "1", "1", "1"]},
+        {"key":"Ice","values": ["1", "2", "1", "1", "1", "0.5", "2", "1", "1", "1", "1", "1", "2", "1", "1", "1", "2"]},
+        {"key":"Fighting","values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "2", "0.5", "0.5", "1", "1", "0.5", "1"]},
         {"key":"Poison","values": ["1", "1", "1", "1", "0.5", "1", "0.5", "0.5", "2", "1", "2", "0.5", "1", "1", "1", "1", "1"]},
-        {"key":"Ground", "values": ["1", "1", "2", "0", "2", "2", "1", "0.5", "1", "1", "1", "1", "0.5", "1", "1"]},
-        {"key":"Flying","values": ["1", "1", "1", "2", "1", "2", "0.5", "1", "0", "1", "1", "0.5", "2", "1", "1"]},
-        {"key":"Psychic","values": ["1", "1", "1", "1", "1", "1", "0.5", "1", "1", "1", "0.5", "2", "1", "0", "1"]},
-        {"key":"Bug","values": ["1", "2", "1", "1", "0.5", "1", "0.5", "2", "0.5", "2", "1", "1", "2", "1", "1"]},
-        {"key":"Rock","values": ["0.5", "0.5", "2", "1", "2", "1", "2", "0.5", "2", "0.5", "1", "1", "1", "1", "1"]},
-        {"key":"Ghost", "values": ["0", "1", "1", "1", "1", "1", "0", "0.5", "1", "1", "1", "0.5", "1", "2", "1"]},
-        {"key":"Dragon", "values": ["1", "0.5", "0.5", "0.5", "0.5", "2", "1", "1", "1", "1", "1", "1", "1", "1", "2"]},
-        {"key":"Dark", "values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2"]},
-        {"key":"Steel", "values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2"]}
+        {"key":"Ground", "values": ["1", "1", "2", "0", "2", "2", "1", "0.5", "1", "1", "1", "1", "0.5", "1", "1", "1", "1"]},
+        {"key":"Flying","values": ["1", "1", "1", "2", "0.5", "2", "0.5", "1", "0", "1", "1", "0.5", "2", "1", "1", "1", "1"]},
+        {"key":"Psychic","values": ["1", "1", "1", "1", "1", "1", "0.5", "1", "1", "1", "0.5", "2", "1", "2", "1", "2", "1"]},
+        {"key":"Bug","values": ["1", "2", "1", "1", "0.5", "1", "0.5", "1", "0.5", "2", "1", "1", "2", "1", "1", "1", "1"]},
+        {"key":"Rock","values": ["0.5", "0.5", "2", "1", "2", "1", "2", "0.5", "2", "0.5", "1", "1", "1", "1", "1", "1", "2"]},
+        {"key":"Ghost", "values": ["0", "1", "1", "1", "1", "1", "0", "0.5", "1", "1", "1", "0.5", "1", "2", "1", "2", "1"]},
+        {"key":"Dragon", "values": ["1", "0.5", "0.5", "0.5", "0.5", "2", "1", "1", "1", "1", "1", "1", "1", "1", "2", "1", "1"]},
+        {"key":"Dark", "values": ["1", "1", "1", "1", "1", "1", "2", "1", "1", "1", "0", "2", "1", "0.5", "1", "0.5", "1"]},
+        {"key":"Steel", "values": ["0.5", "2", "1", "1", "0.5", "0.5", "2", "0", "2", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5"]}
     ]
 }
 
@@ -139,8 +139,8 @@ function findDb(code) {
                 '<div id="' + noEffect[i] + '-text">' + noEffect[i] + '</div><br>';
             }
         } else {
-            document.getElementById("no-effect-content-container").style.height = "0%";
-            document.getElementById("immune-content-container").style.height = "100%";
+            document.getElementById("no-effect-content-container").style.width = "0%";
+            document.getElementById("immune-content-container").style.width = "100%";
         }
         if(immune.length > 0) {
             document.getElementById("immune-content-container").innerHTML += "<br>";
@@ -388,15 +388,12 @@ function onClickType1(type) {
 
 function onClickType2(type) {
     buttons = document.querySelectorAll('.type-button');
-    for(var i = 0; i < buttons.length; i++) {
-        if(buttons[i].innerHTML == type)
-            buttons[i].classList.replace("not-active", "active");
-    }
     type2 = type;
     findDbDual(type1, type2);
     type1 = "";
     type2 = "";
     initButtonsForType1();
+    resetDualButtons();
 }
 
 function resetButtons() {
@@ -425,6 +422,169 @@ function resetDualButtons() {
     }
 }
 
+
+//Function to take attacks and defense lists
+//that contain the dual type conversion
+function renderDualType(dualAttacks, dualDefense) {
+    resetHtml();
+    document.getElementById("effect-break").innerHTML += "<br>";
+    
+    quadAttack = findEffect(dualAttacks, "4");
+    supers = findEffect(dualAttacks, "2");
+    half = findEffect(dualAttacks, "0.5");
+    
+    noEffect = findEffect(dualAttacks, "0");
+
+    quadWeak = findEffect(dualDefense, "4");
+    weak = findEffect(dualDefense, "2");
+    resist = findEffect(dualDefense, "0.5");
+    quadResist = findEffect(dualDefense, "0.25");
+    immune = findEffect(dualDefense, "0");
+
+
+    console.log(supers)
+    
+        // if(dualAttacks[j] == "4") {
+
+    if(quadAttack.length > 0) {
+        document.getElementById("super-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Super Effective</h5>';
+        for(var i in quadAttack) {
+            document.getElementById("super-content-container").innerHTML+=
+            '<div id="' + quadAttack[i] + '-text">' + '<font color="#ccffcc">4x </font>' + quadAttack[i] + '</div><br>';
+        }
+    }
+    else if(supers.length <= 0) {
+         document.getElementById("half-content-container").style.width = "100%";
+         document.getElementById("super-content-container").style.width = "0%";
+    }
+    if(supers.length > 0 && quadAttack <= 0) {
+        document.getElementById("super-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Super Effective</h5>';
+        for(var i in supers) {
+            document.getElementById("super-content-container").innerHTML+=
+            '<div id="' + supers[i] + '-text">' + supers[i] + '</div><br>';
+        }
+    }
+    else if(supers.length > 0 && quadAttack.length > 0) {
+        for(var i in supers) {
+            document.getElementById("super-content-container").innerHTML+=
+            '<div id="' + supers[i] + '-text">' + supers[i] + '</div><br>';
+        }
+    }
+
+    if(quadWeak.length > 0) {
+        document.getElementById("half-content-container").innerHTML += '<h5 style="color: rgb(255, 204, 204);">Half Effective</h5>';
+        for(var i in quadWeak) {
+            document.getElementById("half-content-container").innerHTML+=
+            '<div id="' + quadWeak[i] + '-text">'+ '<font color="#ffcccc">1/4x </font>' + quadWeak[i] + '</div><br>';
+        }
+    }
+    else if(half.length <= 0) {
+        document.getElementById("half-content-container").style.width = "0%";
+        document.getElementById("super-content-container").style.width = "100%";
+    } 
+    if(half.length > 0 && quadWeak.length <= 0) {
+        document.getElementById("half-content-container").innerHTML += '<h5 style="color: rgb(255, 204, 204);">Half Effective</h5>';
+        for(var i in half) {
+            document.getElementById("half-content-container").innerHTML+=
+            '<div id="' + half[i] + '-text">' + half[i] + '</div><br>';
+        }
+    } else if(half.length > 0 && quadWeak.length > 0) {
+        for(var i in half) {
+            document.getElementById("half-content-container").innerHTML+=
+            '<div id="' + half[i] + '-text">' + half[i] + '</div><br>';
+        }
+    }
+    equalHeightsUpperContent();
+    
+
+    if(quadResist.length > 0) {
+        document.getElementById("resist-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Resists</h5>';
+        for(var i in quadResist) {
+            document.getElementById("resist-content-container").innerHTML+=
+            '<div id="' + quadResist[i] + '-text">' + '<font color="#ccffcc">1/4x </font>' + quadResist[i] + '</div><br>';
+        }
+    }
+    else if(resist.length <= 0){
+        document.getElementById("resist-content-container").style.width = "0%";
+        document.getElementById("weak-content-container").style.width = "100%";
+    }
+    if(resist.length > 0 && quadResist.length <= 0) {
+        document.getElementById("resist-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Resists</h5>';
+        for(var i in resist) {
+            document.getElementById("resist-content-container").innerHTML+=
+            '<div id="' + resist[i] + '-text">' + resist[i] + '</div><br>';
+        }
+    }
+    else if(resist.length > 0 && quadResist.length > 0) {
+        for(var i in resist) {
+            document.getElementById("resist-content-container").innerHTML+=
+            '<div id="' + resist[i] + '-text">' + resist[i] + '</div><br>';
+        }
+    } 
+
+    if(quadWeak.length > 0) {
+        document.getElementById("weak-content-container").innerHTML += '<h5 style="color: rgb(255, 204, 204);">Weak Against</h5>';
+        for(var i in quadWeak) {
+            document.getElementById("weak-content-container").innerHTML+=
+            '<div id="' + quadWeak[i] + '-text">' + '<font color="#ffcccc">' + '4x ' + '</font>'+ quadWeak[i] + '</div><br>';
+        }
+    }
+    else if (weak <= 0) {
+        document.getElementById("resist-content-container").style.width = "100%";
+        document.getElementById("weak-content-container").style.width = "0%";
+    }
+    if(weak.length > 0 && quadWeak.length <= 0) {
+        document.getElementById("weak-content-container").innerHTML += '<h5 style="color: rgb(255, 204, 204);">Weak Against</h5>';
+        for(var i in weak) {
+            document.getElementById("weak-content-container").innerHTML+=
+            '<div id="' + weak[i] + '-text">' + weak[i] + '</div><br>';
+        }
+    } 
+    else if(weak.length > 0) {
+        for(var i in weak) {
+            document.getElementById("weak-content-container").innerHTML+=
+            '<div id="' + weak[i] + '-text">' + weak[i] + '</div><br>';
+        }
+    }
+    adjustHeightMidContent();
+
+    if(noEffect.length == 0 && immune.length ==0) {
+        document.getElementById("no-effect-content-container").style.height = "0";
+        document.getElementById("immune-content-container").style.height = "0";
+        document.getElementById("no-effect-content-container").style.width = "0";
+        document.getElementById("immune-content-container").style.width = "0";
+    } 
+    else {
+        if(noEffect.length > 0) {
+            document.getElementById("no-effect-content-container").innerHTML += '<br><h5 style="color: rgb(255, 204, 204);">No Effect Against</h5>';
+            for(var i in noEffect) {
+                document.getElementById("no-effect-content-container").innerHTML+=
+                '<div id="' + noEffect[i] + '-text">' + noEffect[i] + '</div><br>';
+            }
+        } else {
+            document.getElementById("no-effect-content-container").style.width = "0%";
+            document.getElementById("immune-content-container").style.width = "100%";
+        }
+        if(immune.length > 0) {
+            document.getElementById("immune-content-container").innerHTML += "<br>";
+            document.getElementById("immune-content-container").innerHTML += '<h5 style="color: rgb(204, 255, 204);">Immune To</h5>';
+            for(var i in immune) {
+                document.getElementById("immune-content-container").innerHTML+=
+                '<div id="' + immune[i] + '-text">' + immune[i] + '</div><br>';
+            }
+        } else {
+            document.getElementById("no-effect-content-container").style.width = "100%";
+            document.getElementById("immune-content-container").style.width = "0%";
+        }
+    }
+    adjustHeightBottomContent();
+}
+        
+    
+    
+
+
+
 function findDbDual() {
     console.log("Type 1: " + type1 + " Type 2: "+  type2);
     var attackList1 = [];
@@ -445,6 +605,9 @@ function findDbDual() {
     var resist2 = [];
     var noEffect2 = [];
     var immune2 = [];
+
+    console.log(db["Attack"][1].values);
+    console.log(db["Defense"][2].values);
 
     for(var i in db["Attack"]) {
         if(db["Attack"][i].key == type1)
@@ -485,18 +648,17 @@ function findDbDual() {
         if((attacks[0][j] == "0" || attacks[1][j] == "0")) {
             dualSupers[j] = "0";
         }
+        else if((attacks[0][j] == "2" && attacks[1][j] == "0.5") || 
+            (attacks[0][j] == "0.5" && attacks[1][j] == "2")) {
+                dualSupers[j]= "1";
+        } 
         else if(attacks[0][j] == "2" && attacks[1][j] == "2") {
-            console.log(attacks[0][j] + " = " + attacks[1][j])
             dualSupers[j]= "4";
         }
         else if((attacks[0][j] == "2" && attacks[1][j] == "1") || 
             (attacks[0][j] == "1" && attacks[1][j] == "2")) {
                 dualSupers[j]= "2";
         }  
-        else if((attacks[0][j] == "2" && attacks[1][j] == "0.5") || 
-            (attacks[0][j] == "0.5" && attacks[1][j] == "2")) {
-                dualSupers[j]= "1";
-        } 
         else if((attacks[0][j] == "1" && attacks[1][j] == "0.5") || 
             (attacks[0][j] == "0.5" && attacks[1][j] == "1")) {
             dualSupers[j]= "0.5";
@@ -507,30 +669,9 @@ function findDbDual() {
         else if(attacks[0][j] == "1" && attacks[1][j] == "1") {
             dualSupers[j]= "1";
         }
-
-        // if(dualSupers[j] == "4") {
-        //     console.log("quad attack: "+ numberToString(j.toString()));
-        // }
-        // else if(dualSupers[j] == "2") {
-        //     console.log("super: "+ numberToString(j.toString()));
-        // }
-        // else if(dualSupers[j] == "0.5") {
-        //     console.log("half: " + numberToString(j.toString()));
-        // }
-        // else if(dualSupers[j] == "0.25") {
-        //     console.log("forth damage: "+ numberToString(j.toString()));
-        // }
-        // else if(dualSupers[j] == "0") {
-        //     console.log("immune: "+ numberToString(j.toString()));
-        // }
     }
 
     for(var j = 0; j < 17; j++) {
-        if(j == 4) {
-            console.log(defense[0][j]);
-            console.log(defense[1][j]);
-        }
-
         if((defense[0][j] == "0" || defense[1][j] == "0")) {
             dualDefense[j] = "0";
         }
@@ -539,7 +680,6 @@ function findDbDual() {
             dualDefense[j] = "1";
         }
         else if(defense[0][j] == "2" && defense[1][j] == "2") {
-            console.log(defense[0][j] + " = " + defense[1][j])
             dualDefense[j]= "4";
         }
         else if((defense[0][j] == "2" && defense[1][j] == "1") || 
@@ -561,30 +701,30 @@ function findDbDual() {
             dualDefense[j]= "1";
         }
 
-        if(dualDefense[j] == "4") {
-            console.log("quad damage: "+ numberToString(j.toString()));
-        }
-        else if(dualDefense[j] == "2") {
-            console.log("super: "+ numberToString(j.toString()));
-        }
-        else if(dualDefense[j] == "0.5") {
-            console.log("resist: " + numberToString(j.toString()));
-        }
-        else if(dualDefense[j] == "0.25") {
-            console.log("quad resist: "+ numberToString(j.toString()));
-        }
-        else if(dualDefense[j] == "0") {
-            console.log("immune: "+ numberToString(j.toString()));
-        }
-    }
+        // if(dualDefense[j] == "4") {
+        //     console.log("quad damage: "+ numberToString(j.toString()));
+        // }
+        // else if(dualDefense[j] == "2") {
+        //     console.log("super: "+ numberToString(j.toString()));
+        // }
+        // else if(dualDefense[j] == "0.5") {
+        //     console.log("resist: " + numberToString(j.toString()));
+        // }
+        // else if(dualDefense[j] == "0.25") {
+        //     console.log("quad resist: "+ numberToString(j.toString()));
+        // }
+        // else if(dualDefense[j] == "0") {
+        //     console.log("immune: "+ numberToString(j.toString()));
+        // }
 
-    console.log(attacks);
+        
+    }
+    renderDualType(dualSupers, dualDefense);
     
     supers1 = findEffect(dualSupers, "0.25");
     applyDualTypeTitle(type1, type2);
     dualSupers = [];
     dualDefense = [];
-    console.log(supers1);
 }
 
 function initDualVars() {
