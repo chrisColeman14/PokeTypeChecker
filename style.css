@@ -22,12 +22,17 @@ button {
   margin-bottom: 5px;
   border-radius: 25px;
   border: 2px solid black;
+  outline: none;
 }
 
 button:focus {
   outline: none;
 }
 
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
 table {
   text-align: center;
 }
@@ -64,7 +69,11 @@ p {
   overflow-y: auto;
 }
 
-#navbar-container {
+#body-content-container {
+  text-align: center;
+}
+
+#navbar-container, #resources-nav-bar {
   text-align: center;
 }
 
@@ -78,7 +87,16 @@ p {
   display: inline-block;
   padding: 20px;
   border: solid 2px #3b3b3b;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px 0 #464646, 0 6px 20px 0 #464646;
+}
+
+.btn, .btn:focus, .btn:active, .btn-default, .btn-default:hover, .btn-default:active, .btn-default:active:focus, .btn-default:visited, .btn-default:focus{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#clear-button:focus, #clear-button:active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #walkthrough-link {
@@ -108,6 +126,11 @@ p {
 #effect-middle-content-wrapper {
   height: 50%;
   position: absolute;
+  
+}
+
+#middle-content-wrapper, #upper-content-wrapper, #bottom-content-wrapper {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
  #effect-upper, #effect-middle, #effect-bottom{
@@ -233,7 +256,7 @@ p {
   height: 40px;
 	background-color: gray;
   color: white;
-	border: 2px solid gray;
+  border: 2px solid gray;
 }
 #normal-button:hover, #normal-button.active {
   background-color: white;
@@ -261,239 +284,239 @@ p {
 #water-button {
   width:86px;
   height: 40px;
-	background-color: #3333ff;
-	border: 2px solid #3333ff;
+	background-color: #39f;
+	border: 2px solid #39f;
   color: white;
 }
 #water-button:hover, #water-button.active {
 	background-color: white;
-	color: #3333ff;
+	color: #39f;
 }
 #water-td, #Water-text {
-  color: #3333ff;
+  color: #39f;
 }
 
 #grass-button {
   width:86px;
   height: 40px;
-	background-color: #00b33c;
-	border: 2px solid #00b33c;
+	background-color: #7c5;
+	border: 2px solid #7c5;
   color: white;
 }
 #grass-button:hover, #grass-button.active {
   background-color: white;
-  color: #00b33c;
+  color: #7c5;
 }
 #grass-td, #Grass-text {
-  color: #00b33c;
+  color: #7c5;
 }
 
 #electric-button {
   width:86px;
   height: 40px;
-	background-color: #f8d030;
-	border: 2px solid #f8d030;
+	background-color:#fc3;
+	border: 2px solid#fc3;
   color: white;
 }
 #electric-button:hover, #electric-button.active {
   background-color: white;
-  color: #f8d030;
+  color:#fc3;
 }
 #electric-td, #Electric-text {
-  color: #f8d030;
+  color: #fc3;
 }
 
 #ice-button {
   width:86px;
   height: 40px;
-	background-color: #99ffff;
-	border: 2px solid #99ffff;
+	background-color: #6cf;
+	border: 2px solid #6cf;
   color: white;
 }
 #ice-button:hover, #ice-button.active {
   background-color: white;
-  color: #99ffff;
+  color: #6cf;
 }
 #ice-td, #Ice-text {
-  color: #99ffff;
+  color: #6cf;
 }
 
 #fighting-button {
   width:86px;
   height: 40px;
-	background-color: #ff0000;
-	border: 2px solid #ff0000;
+	background-color: #b54;
+	border: 2px solid #b54;
   color: white;
 }
 #fighting-button:hover, #fighting-button.active {
   background-color: white;
-  color: #ff0000;
+  color: #b54;
 }
 #fighting-td, #Fighting-text {
-  color: #ff0000;
+  color: #b54;
 }
 
 #poison-button {
   width:86px;
   height: 40px;
-	background-color: #a040a0;
-	border: 2px solid #a040a0;
+	background-color: #a59;
+	border: 2px solid #a59;
   color: white;
 }
 #poison-button:hover, #poison-button.active {
   background-color: white;
-	color: #a040a0;
+	color: #a59;
 }
 #poison-td, #Poison-text {
-  color: #a040a0;
+  color: #a59;
 }
 
 #ground-button {
   width:86px;
   height: 40px;
-	background-color: #e0c068;
-	border: 2px solid #e0c068;
+	background-color: #db5;
+	border: 2px solid #db5;
   color: white;
 }
 #ground-button:hover, #ground-button.active {
   background-color: white;
-  color: #e0c068;
+  color: #db5;
 }
 #ground-td, #Ground-text {
-  color: #e0c068;
+  color: #db5;
 }
 
 #flying-button {
   width:86px;
   height: 40px;
-	background-color: #a890f0;
-	border: 2px solid #a890f0;
+	background-color: #89f;
+	border: 2px solid #89f;
   color: white;
 }
 #flying-button:hover, #flying-button.active {
   background-color: white;
-  color: #a890f0;
+  color: #89f;
 }
 #flying-td, #Flying-text {
-  color: #a890f0;
+  color: #89f;
 }
 
 #psychic-button {
   width:86px;
   height: 40px;
-	background-color: #f85888;
-	border: 2px solid #f85888;
+	background-color: #f59;
+	border: 2px solid #f59;
   color: white;
 }
 #psychic-button:hover, #psychic-button.active {
   background-color: white;
-  color: #f85888;
+  color: #f59;
 }
 #psychic-td, #Psychic-text {
-  color: #f85888;
+  color: #f59;
 }
 
 #bug-button {
   width:86px;
   height: 40px;
-	background-color: #a8b820;
-	border: 2px solid #a8b820;
+	background-color: #ab2;
+	border: 2px solid #ab2;
   color: white;
 }
 #bug-button:hover, #bug-button.active {
   background-color: white;
-  color: #a8b820;
+  color: #ab2;
 }
 #bug-td, #Bug-text {
-  color: #a8b820;
+  color: #ab2;
 }
 
 #rock-button {
   width:86px;
   height: 40px;
-	background-color: #b8a038;
-	border: 2px solid #b8a038;
+	background-color: #ba6;
+	border: 2px solid #ba6;
   color: white;
 }
 #rock-button:hover, #rock-button.active {
   background-color: white;
-  color: #b8a038;
+  color: #ba6;
 }
 #rock-td, #Rock-text {
-  color: #b8a038;
+  color: #ba6;
 }
 
 #ghost-button {
   width:86px;
   height: 40px;
-	background-color: #705898;
-	border: 2px solid #705898;
+	background-color: #66b;
+	border: 2px solid #66b;
   color: white;
 }
 #ghost-button:hover, #ghost-button.active {
   background-color: white;
-  color: #705898;
+  color: #66b;
 }
 #ghost-td, #Ghost-text {
-  color: #705898;
+  color: #66b;
 }
 
 #dragon-button {
   width:86px;
   height: 40px;
-	background-color: #7038f8;
-	border: 2px solid #7038f8;
+	background-color: #76e;
+	border: 2px solid #76e;
   color: white;
 }
 #dragon-button:hover, #dragon-button.active {
   background-color: white;
-  color: #7038f8;
+  color: #76e;
 }
 #dragon-td, #Dragon-text {
-  color: #7038f8;
+  color: #76e;
 }
 
 #dark-button {
   width:86px;
   height: 40px;
-	background-color: #705848;
-	border: 2px solid #705848;
+	background-color: #754;
+	border: 2px solid #754;
   color: white;
 }
 #dark-button:hover, #dark-button.active {
   background-color: white;
-  color: #705848;
+  color: #754;
 }
 #dark-td, #Dark-text {
-  color: #705848;
+  color: #754;
 }
 
 #steel-button {
   width:86px;
   height: 40px;
-	background-color: #b8b8d0;
-	border: 2px solid #b8b8d0;
+	background-color: #aab;
+	border: 2px solid #aab;
   color: white;
 }
 #steel-button:hover, #steel-button.active {
   background-color: white;
-  color: #b8b8d0;
+  color: #aab;
 }
 #steel-td, #Steel-text {
-  color: #b8b8d0;
+  color: #aab;
 }
 
 #fairy-button {
   width:86px;
   height: 40px;
-	background-color: #e898e8;
-	border: 2px solid #e898e8;
+	background-color: #e9e;
+	border: 2px solid #e9e;
   color: white;
 }
 #fairy-button:hover, #fairy-button.active {
   background-color: white;
-	color: #e898e8;
+	color: #e9e;
 }
 #fairy-td, #Fairy-text {
-  color: #e898e8;
+  color: #e9e;
 }

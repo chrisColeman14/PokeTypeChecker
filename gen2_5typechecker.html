@@ -14,6 +14,7 @@
     </head>
 
     <body id="body">
+            <audio src="background_music.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
         <div id="body-wrapper">
             <div id="body-container" class="container-large">
                 <div id="navbar-container" class="container">
@@ -39,7 +40,7 @@
                         </button>
                         <button id="clear-button" class="btn" onclick="resetTypeButtonContainer()">Reset</button>
                     </div>
-                    <div id="type-button-container" class="container-small animated slideinup">
+                    <div id="type-button-container" class="container-small animated slideinup ">
                         <button id="normal-button" class="btn type-button not-active" onclick='findDb("Normal")'>Normal</button>&nbsp;
                         <button id="fire-button" class="btn type-button not-active" onclick='findDb("Fire")'>Fire</button>&nbsp;
                         <button id="water-button" class="btn type-button not-active" onclick='findDb("Water")'>Water</button>&nbsp;
@@ -80,9 +81,9 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div id="middle-content-wrapper">
                             <div id="effect-content-middle-wrapper" class="container-large">
-                                <div id="effect-break"></div>
                                 <div id="effect-middle" class="container-small effect-content-row">
                                     <div id="resist-content-container" class="container-small">
                                     </div>
@@ -91,6 +92,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div id="bottom-content-wrapper">
                             <div id="effect-content-bottom-wrapper" class="container-large">
                                     <div id="effect-bottom" class="container-small effect-content-row">

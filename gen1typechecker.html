@@ -14,6 +14,7 @@
     </head>
 
     <body id="body">
+            <audio src="background_music.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
         <div id="body-wrapper">
             <div id="body-container" class="container-large">
                 <div id="navbar-container" class="container">
@@ -33,33 +34,41 @@
                 
                 <br>
                 <div id="body-content-container" class="container">
-                    <div id="type-button-container" class="container-small animated slideinup">
-                        <button id="normal-button" class="btn" onclick='findDb("Normal")'>Normal</button>&nbsp;
-                        <button id="fire-button" class="btn" onclick='findDb("Fire")'>Fire</button>&nbsp;
-                        <button id="water-button" class="btn" onclick='findDb("Water")'>Water</button>&nbsp;
-                        <button id="electric-button" class="btn" onclick='findDb("Electric")'>Electric</button>&nbsp;
+                    <div id="resources-nav-bar" class="container-small">
+                        <button id="toggle-dual-button" class="btn" onclick="toggleDualType()">
+                            <div id="dual-button-text">Dual-Types</div>
+                        </button>
+                        <button id="clear-button" class="btn" onclick="resetTypeButtonContainer()">Reset</button>
+                    </div>
+                    <div id="type-button-container" class="container-small animated slideinup ">
+                        <button id="normal-button" class="btn type-button not-active" onclick='findDb("Normal")'>Normal</button>&nbsp;
+                        <button id="fire-button" class="btn type-button not-active" onclick='findDb("Fire")'>Fire</button>&nbsp;
+                        <button id="water-button" class="btn type-button not-active" onclick='findDb("Water")'>Water</button>&nbsp;
+                        <button id="electric-button" class="btn type-button not-active" onclick='findDb("Electric")'>Electric</button>&nbsp;
                         <br>
                         <br>
-                        <button id="grass-button" class="btn" onclick='findDb("Grass")'>Grass</button>&nbsp;
-                        <button id="ice-button" class="btn" onclick='findDb("Ice")'>Ice</button>&nbsp;
-                        <button id="fighting-button" class="btn" onclick='findDb("Fighting")'>Fighting</button>&nbsp;
-                        <button id="poison-button" class="btn" onclick='findDb("Poison")'>Poison</button>&nbsp;
+                        <button id="grass-button" class="btn type-button not-active" onclick='findDb("Grass")'>Grass</button>&nbsp;
+                        <button id="ice-button" class="btn type-button not-active" onclick='findDb("Ice")'>Ice</button>&nbsp;
+                        <button id="fighting-button" class="btn type-button not-active" onclick='findDb("Fighting")'>Fighting</button>&nbsp;
+                        <button id="poison-button" class="btn type-button not-active" onclick='findDb("Poison")'>Poison</button>&nbsp;
                         <br>
                         <br>
-                        <button id="ground-button" class="btn" onclick='findDb("Ground")'>Ground</button>&nbsp;
-                        <button id="flying-button" class="btn" onclick='findDb("Flying")'>Flying</button>&nbsp;
-                        <button id="psychic-button" class="btn" onclick='findDb("Psychic")'>Psychic</button>&nbsp;
-                        <button id="bug-button" class="btn" onclick='findDb("Bug")'>Bug</button>&nbsp;
+                        <button id="ground-button" class="btn type-button not-active" onclick='findDb("Ground")'>Ground</button>&nbsp;
+                        <button id="flying-button" class="btn type-button not-active" onclick='findDb("Flying")'>Flying</button>&nbsp;
+                        <button id="psychic-button" class="btn type-button not-active" onclick='findDb("Psychic")'>Psychic</button>&nbsp;
+                        <button id="bug-button" class="btn type-button not-active" onclick='findDb("Bug")'>Bug</button>&nbsp;
                         <br>
                         <br>
-                        <button id="rock-button" class="btn" onclick='findDb("Rock")'>Rock</button>&nbsp;
-                        <button id="ghost-button" class="btn" onclick='findDb("Ghost")'>Ghost</button>&nbsp;
-                        <button id=dragon-button class="btn" onclick='findDb("Dragon")'>Dragon</button>&nbsp;
+                        <button id="rock-button" class="btn type-button not-active" onclick='findDb("Rock")'>Rock</button>&nbsp;
+                        <button id="ghost-button" class="btn type-button not-active" onclick='findDb("Ghost")'>Ghost</button>&nbsp;
+                        <button id=dragon-button class="btn type-button not-active" onclick='findDb("Dragon")'>Dragon</button>&nbsp;
                         <br>
                         <br>
+                        <div id="type-title-container" class="container-small">
+                            <div id="type-title"></div>
+                        </div>
                         <div id="upper-content-wrapper">
                             <div id="effect-content-upper-wrapper" class="container-large">
-                                <div id="effect-break"></div>
                                 <div id="effect-upper" class="container-small effect-content-row">
                                     <div id="super-content-container" class="container-small">
                                     </div>
@@ -68,9 +77,9 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div id="middle-content-wrapper">
                             <div id="effect-content-middle-wrapper" class="container-large">
-                                <div id="effect-break"></div>
                                 <div id="effect-middle" class="container-small effect-content-row">
                                     <div id="resist-content-container" class="container-small">
                                     </div>
@@ -79,6 +88,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div id="bottom-content-wrapper">
                             <div id="effect-content-bottom-wrapper" class="container-large">
                                     <div id="effect-bottom" class="container-small effect-content-row">
